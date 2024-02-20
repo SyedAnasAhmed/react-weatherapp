@@ -27,3 +27,6 @@ export const useDate = () => {
         date , time     
     }
 }
+
+
+export default useDate

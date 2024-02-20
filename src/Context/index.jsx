@@ -9,7 +9,7 @@ export const Statecontextprovider = ({ children }) => {
 
     const [values, setvalues] = useState([])
 
-    const [place, setPlace] = useState("Karachi")
+    const [place, setPlace] = useState("karachi")
 
     const [thislocation, setLocation] = useState("")
 
@@ -21,10 +21,10 @@ export const Statecontextprovider = ({ children }) => {
             url: "https://visual-crossing-weather.p.rapidapi.com/forecast",
             params: {
                 aggregateHours: '24',
-                location: 'Washington,DC,USA',
-                contentType: 'csv',
-                unitGroup: 'us',
-                shortColumnNames: '0'
+                location: place,
+                contentType: 'json',
+                unitGroup: 'metric',
+                shortColumnNames: 0
             },
             headers: {
                 'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
@@ -40,10 +40,11 @@ export const Statecontextprovider = ({ children }) => {
             setvalues(thisData.values)
             setWether(thisData.values[0])
 
-        } catch (error) {
-            console.error(error);
+        } catch (e) {
+            console.error(e);
             alert("This place does not exist")
         }
+        
     }
 
     useEffect(() => {
@@ -60,6 +61,7 @@ export const Statecontextprovider = ({ children }) => {
             setPlace,
             values,
             thislocation,
+            place
         }}>
             {children}
         </Statecontext.Provider>
