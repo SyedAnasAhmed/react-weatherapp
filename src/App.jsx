@@ -47,13 +47,13 @@ function App() {
 
       <main className='w-full flex flex-wrap gap-8 py-4 px-[10%] items-center justify-center'>
         <Weathercard
-          place={thislocation}
-          windspeed={weather.wspd}
-          humidity={weather.humidity}
-          temperature={weather.temp}
-          heatIndex={weather.heatIndex}
-          iconString={weather.condition}
-          condition={weather.condition} />
+          // place={thislocation}
+          windspeed={weather?.wspd}
+          humidity={weather?.humidity}
+          temperature={weather?.temp}
+          heatIndex={weather?.heatIndex}
+          iconString={weather?.condition}
+          condition={weather?.condition} />
       </main>
 
       <div className='flex justify-center gap-8 flex-wrap w-[60%]'>

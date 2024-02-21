@@ -5,13 +5,13 @@ import "../index.css"
 
 
 const Weathercard = (
-    temperature,
+   { temperature,
     windspeed,
     humidity,
     place,
     heatIndex,
     iconString,
-    condition,
+    condition,}
 ) => {
 
     const [icon, setIcon] = useState()
