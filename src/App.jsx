@@ -15,7 +15,7 @@ function App() {
 
   const submitCity = () => {
     setPlace(input)
-    setInput(" ")
+    setInput("")
   }
 
   
@@ -36,8 +36,9 @@ function App() {
             if (e.key === "Enter") {
               // sumbit the form
               submitCity()
+              console.log("hello")
             }
-          }} type="text" placeholder='Search City' className='focus:outline-none w-full text-[212121] text-lg' onChange={e => setInput(e.target.value)} name="" id="" />
+          }} type="text" placeholder='Search City' className='focus:outline-none w-full text-[#212121] text-lg' onChange={e => setInput(e.target.value)} name="" id="" />
 
         </div>
 
